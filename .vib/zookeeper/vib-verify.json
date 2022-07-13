@@ -39,6 +39,17 @@
           }
         },
         {
+          "action_id": "goss",
+          "params": {
+            "resources": {
+              "path": "/.vib/zookeeper/goss"
+            },
+            "remote": {
+              "workload": "deploy-zookeeper"
+            }
+          }
+        },
+        {
           "action_id": "health-check",
           "params": {
             "endpoint": "lb-zookeeper-tcp-client"
