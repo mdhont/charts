@@ -21,8 +21,4 @@ name: zookeeper
 sources:
   - https://github.com/bitnami/containers/tree/main/bitnami/zookeeper
   - https://zookeeper.apache.org/
-<<<<<<< HEAD
-version: 10.0.5
-=======
-version: 10.0.21
->>>>>>> a424a654b ([bitnami/zookeeper] Add Zookeeper Helm Chart tests)
+version: 10.0.22
