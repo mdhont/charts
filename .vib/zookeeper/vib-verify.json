@@ -38,7 +38,11 @@
               "path": "/.vib/zookeeper/goss"
             },
             "remote": {
+<<<<<<< HEAD
               "workload": "sts-zookeeper"
+=======
+              "workload": "deploy-zookeeper"
+>>>>>>> a424a654b ([bitnami/zookeeper] Add Zookeeper Helm Chart tests)
             }
           }
         },
