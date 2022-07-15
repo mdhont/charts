@@ -72,6 +72,17 @@
               "workload": "deploy-spark"
             }
           }
+        },
+        {
+          "action_id": "cypress",
+          "params": {
+            "resources": {
+              "path": "/.vib/spark/cypress"
+            },
+            "remote": {
+              "workload": "deploy-spark"
+            }
+          }
         }
       ]
     },
