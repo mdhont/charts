@@ -79,11 +79,14 @@
             "resources": {
               "path": "/.vib/spark/cypress"
             },
-            "remote": {
-              "workload": "sts-spark"
+            "endpoint": "lb-spark-http",
+            "app_protocol": "HTTP",
+            "env": {
+              "username": "user",
+              "password": "ComplicatedPassword123!4"
             }
           }
-        }
+        },
       ]
     },
     "publish": {
