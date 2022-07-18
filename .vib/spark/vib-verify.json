@@ -64,8 +64,12 @@
             },
             "endpoint": "lb-spark-master-svc-http",
             "app_protocol": "HTTP",
+            "env": {
+              "username": "user",
+              "password": "ComplicatedPassword123!4"
+            }
           }
-        },
+        }
       ]
     }
   }
