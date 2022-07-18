@@ -63,7 +63,7 @@
               "path": "/.vib/spark/cypress"
             },
             "remote": {
-              "workload": "deploy-spark"
+              "workload": "sts-spark"
             }
           }
         }
