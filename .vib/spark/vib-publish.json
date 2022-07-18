@@ -64,14 +64,14 @@
             "resources": {
               "path": "/.vib/spark/cypress"
             },
-            "endpoint": "lb-spark-http",
+            "endpoint": "lb-spark-master-svc-http",
             "app_protocol": "HTTP",
             "env": {
               "username": "user",
               "password": "ComplicatedPassword123!4"
             }
           }
-        },
+        }
       ]
     },
     "publish": {
