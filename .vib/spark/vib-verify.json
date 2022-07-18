@@ -52,7 +52,7 @@
               "path": "/.vib/spark/goss"
             },
             "remote": {
-              "workload": "deploy-spark"
+              "workload": "deploy-spark-master"
             }
           }
         },
