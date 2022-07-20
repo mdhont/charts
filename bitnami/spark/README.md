@@ -15,7 +15,7 @@ $ helm repo add bitnami https://charts.bitnami.com/bitnami
 $ helm install my-release bitnami/spark
 ```
 
-## Introduction
+### Introduction
 
 This chart bootstraps an [Apache Spark](https://github.com/bitnami/bitnami-docker-spark) deployment on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
