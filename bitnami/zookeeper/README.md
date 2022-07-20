@@ -21,7 +21,7 @@ This chart bootstraps a [ZooKeeper](https://github.com/bitnami/bitnami-docker-zo
 
 Bitnami charts can be used with [Kubeapps](https://kubeapps.dev/) for deployment and management of Helm Charts in clusters.
 
-## Prerequisites
+### Prerequisites
 
 - Kubernetes 1.19+
 - Helm 3.2.0+
