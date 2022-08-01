@@ -1,19 +1,4 @@
-file:
-  /opt/bitnami/spark/conf/spark-defaults.conf:
-    filetype: file
-    exists: true
-    mode: "0664"
 command:
-  user-id-test:
-    exec: if [ "$(id -u)" -eq 0 ]; then exit 1; fi
-    exit-status: 0
-    stdout: []
-    stderr: []
-  spark-version-ok:
-    exec: spark-shell --version 2>&1 >/dev/null | grep $APP_VERSION
-    exit-status: 0
-    stdout: []
-    stderr: []
   spark-help-ok:
     exec: spark-shell --help
     exit-status: 0
