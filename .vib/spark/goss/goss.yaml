@@ -4,6 +4,7 @@
     stdout: []
     stderr: []
   spark-submit-app:
+    timeout: 20000
     exec: spark-submit --class org.apache.spark.examples.SparkPi --master spark://$HOSTNAME:$SPARK_MASTER_PORT --deploy-mode cluster /opt/bitnami/spark/examples/jars/spark*.jar
     exit-status: 0
     stdout: []
