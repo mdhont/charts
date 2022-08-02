@@ -71,7 +71,11 @@
               "password": "ComplicatedPassword123!4"
             }
           }
+<<<<<<< HEAD
         },
+=======
+        }
+>>>>>>> c3f09e1ba048302333493cb36e3aa87b1c60ab89
       ]
     },
     "publish": {
