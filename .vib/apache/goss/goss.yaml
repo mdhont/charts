@@ -1,0 +1,6 @@
+command:
+  which-apache:
+    exec: which apachectl
+    exit-status: 0
+    stdout: []
+    stderr: []
