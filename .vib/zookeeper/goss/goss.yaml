@@ -1,0 +1,4 @@
+command:
+  zookeeper-create-znode:
+    exec: /opt/bitnami/zookeeper/bin/zkCli.sh -server 127.0.0.1:$ZOO_PORT_NUMBER create /my_key_{{randAlpha 5}} my_data
+    exit-status: 0
