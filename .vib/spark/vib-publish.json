@@ -69,7 +69,6 @@
             "env": {
               "username": "user",
               "password": "ComplicatedPassword123!4"
-              "workload": "sts-spark"
             }
           }
         },
