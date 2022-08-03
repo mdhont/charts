@@ -1,4 +1,3 @@
-host: bitnami-discourse.my
-postgresql:
-  auth:
-    username: bn_discourse
+master:
+  containerPorts:
+    cluster: 7077
