@@ -2,7 +2,6 @@ file:
   /bitnami/zookeeper/data:
     exists: true
     filetype: directory
-    mode: "0755"
   /opt/bitnami/zookeeper/conf/zoo.cfg:
     exists: true
     filetype: file
