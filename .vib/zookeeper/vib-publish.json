@@ -45,7 +45,8 @@
             },
             "remote": {
               "workload": "sts-zookeeper"
-            }
+            },
+            "vars_file": "vars.yaml"
           }
         },
         {
