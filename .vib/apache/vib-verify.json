@@ -57,7 +57,7 @@
               "path": "/.vib/apache/cypress"
             },
             "endpoint": "lb-apache-http",
-            "app_protocol": "HTTP",
+            "app_protocol": "HTTP"
           }
         }
       ]
