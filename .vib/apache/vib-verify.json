@@ -37,6 +37,28 @@
             "endpoint": "lb-apache-http",
             "app_protocol": "HTTP"
           }
+        },
+        {
+          "action_id": "goss",
+          "params": {
+            "resources": {
+              "path": "/.vib/apache/goss"
+            },
+            "remote": {
+              "workload": "deploy-apache"
+            },
+            "vars_file": "vars.yaml"
+          }
+        },
+        {
+          "action_id": "cypress",
+          "params": {
+            "resources": {
+              "path": "/.vib/apache/cypress"
+            },
+            "endpoint": "lb-apache-http",
+            "app_protocol": "HTTP",
+          }
         }
       ]
     }
