@@ -1,6 +1,14 @@
-command:
-  which-apache:
-    exec: which apachectl
-    exit-status: 0
-    stdout: []
-    stderr: []
+file:
+  /opt/bitnami/apache:
+    exists: true
+    filetype: directory
+    mode: "0775"
+  /etc/hosts:
+    exists: true
+    filetype: file
+    contains:
+      - "{{ index .Vars.hostAliases.hostnames 0 }}"
+  /app:
+    exists: true
+    filetype: directory
+    mode: "0755"

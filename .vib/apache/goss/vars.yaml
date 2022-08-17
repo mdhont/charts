@@ -1,0 +1,3 @@
+hostAliases:
+  hostnames:
+    - status.localhost
