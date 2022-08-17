@@ -45,7 +45,7 @@
               "path": "/.vib/moodle/goss"
             },
             "remote": {
-              "workload": "sts-moodle"
+              "workload": "deploy-moodle"
             },
             "vars_file": "vars.yaml"
           }
