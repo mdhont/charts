@@ -7,7 +7,7 @@ file:
     exists: true
     filetype: file
     contains:
-      - "{{ index .Vars.hostAliases.hostnames 0 }}"
+      - /^{{ index .Vars.hostAliases 0 "ip" }}.*{{ index .Vars.hostAliases 0 "hostnames" 0 }}$/
   /app:
     exists: true
     filetype: directory
