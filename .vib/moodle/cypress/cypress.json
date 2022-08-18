@@ -1,8 +1,6 @@
 {
   "baseUrl": "http://localhost",
-  "chromeWebSecurity": false,
-  "env": {
-    "username": "user",
-    "password": "ComplicatedPassword123!4"
-  }
+  "pageLoadTimeout": 150000,
+  "defaultCommandTimeout": 50000,
+  "chromeWebSecurity": false
 }
