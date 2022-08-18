@@ -54,7 +54,7 @@
           "action_id": "cypress",
           "params": {
             "resources": {
-              "path": "/.vib/spark/cypress"
+              "path": "/.vib/moodle/cypress"
             },
             "endpoint": "lb-moodle-http",
             "app_protocol": "HTTP"
