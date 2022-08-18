@@ -1,9 +1,4 @@
 {
   "baseUrl": "http://localhost",
-  "env": {
-    "username": "user",
-    "password": "0P6KcbyjRt",
-    "email": "user@example.com"
-  },
   "chromeWebSecurity": false
 }
