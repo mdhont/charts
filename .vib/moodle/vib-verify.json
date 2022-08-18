@@ -35,11 +35,7 @@
           "action_id": "health-check",
           "params": {
             "endpoint": "lb-moodle-http",
-            "app_protocol": "HTTP",
-            "env": {
-              "username": "user",
-              "password": "ComplicatedPassword123!4"
-            }
+            "app_protocol": "HTTP"
           }
         },
         {
@@ -61,7 +57,11 @@
               "path": "/.vib/moodle/cypress"
             },
             "endpoint": "lb-moodle-http",
-            "app_protocol": "HTTP"
+            "app_protocol": "HTTP",
+            "env": {
+              "username": "user",
+              "password": "ComplicatedPassword123!4"
+            }
           }
         }
       ]
