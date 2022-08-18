@@ -10,6 +10,7 @@ it('adds new course', () => {
     cy.get('#id_shortname').type(courses.newCourse.shortName);
   });
   cy.get('.fp-btn-add').click();
+  cy.contains('a', 'Upload a file').click();
   cy.get('input[type="file"]').selectFile(
     'cypress/fixtures/images/post_image.png',
     {
