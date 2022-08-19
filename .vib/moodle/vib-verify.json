@@ -22,7 +22,7 @@
           "url": "{SHA_ARCHIVE}",
           "path": "/bitnami/moodle"
         },
-        "runtime_parameters": "bW9vZGxlUGFzc3dvcmQ6IHRlc3RfdXNlcgptb29kbGVVc2VybmFtZTogQ29tcGxpY2F0ZWRQYXNzd29yZDEyMyE0Cm1hcmlhZGI6CiAgYXV0aDoKICAgIGRhdGFiYXNlOiBiaXRuYW1pX21vb2RsZQogICAgdXNlcm5hbWU6IGJuX21vb2RsZQpzZXJ2aWNlOgogIHR5cGU6IExvYWRCYWxhbmNlcgogIHBvcnRzOgogICAgaHR0cDogODA=",
+        "runtime_parameters": "bW9vZGxlVXNlck5hbWU6IHRlc3RfdXNlcgptb29kbGVQYXNzd29yZDogQ29tcGxpY2F0ZWRQYXNzd29yZDEyMyE0Cm1hcmlhZGI6CiAgYXV0aDoKICAgIGRhdGFiYXNlOiBiaXRuYW1pX21vb2RsZQogICAgdXNlcm5hbWU6IGJuX21vb2RsZQpzZXJ2aWNlOgogIHR5cGU6IExvYWRCYWxhbmNlcgogIHBvcnRzOgogICAgaHR0cDogODA=",
         "target_platform": {
           "target_platform_id": "{VIB_ENV_TARGET_PLATFORM}",
           "size": {
