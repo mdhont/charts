@@ -13,14 +13,6 @@ command:
       - "Bucket created successfully `test`."
     stderr: [ ]
     timeout: 20000    
-  mc-list-buckets:
-    exec: mc ls
-    exit-status: 0
-    stdout:
-      - "bin"
-      - "licenses"
-    stderr: [ ]
-    timeout: 20000 
   mc-ls-play:
     exec: mc ls play
     exit-status: 0
