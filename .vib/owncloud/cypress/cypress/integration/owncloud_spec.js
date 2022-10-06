@@ -21,7 +21,6 @@ it('allows creating a folder and uploading a file ', () => {
     cy.get('[href*="file_to_upload"]')
       .invoke('attr', 'href')
       .then((href) => {
-        cy.log(href);
         cy.request({
           url: href,
           method: 'GET',
