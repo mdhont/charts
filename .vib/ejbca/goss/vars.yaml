@@ -1,6 +1,6 @@
 ejbcaCA:
   name: ManagementTestCA
-  baseDN: "UID=c-1CCXmPAsNWmZuDtQQ8FHl7tcVdjCiNTH,O=ExampleCA,C=SE"
+  baseDN: "UID=c-1CCXmPAsNWmZuDtQQ8FHl7tcVdjCiNTH,O=ExampleTestCA,C=SE"
 podSecurityContext:
   fsGroup: 1002
 containerSecurityContext:
