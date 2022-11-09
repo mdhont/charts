@@ -1,9 +1,11 @@
 {
-  "baseUrl": "http://localhost",
+  "baseUrl": "http://35.185.115.241",
   "trashAssetsBeforeRuns": false,
   "env": {
     "username": "bitnamiTest",
     "password": "ComplicatedPassword123!4",
     "baseDN": "UID=c-1CCXmPAsNWmZuDtQQ8FHl7tcVdjCiNTH,O=ExampleCA,C=SE"
-  }
+  },
+  "pageLoadTimeout": 240000,
+  "defaultCommandTimeout": 80000
 }
