@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://35.185.115.241",
+  "baseUrl": "http://localhost",
   "trashAssetsBeforeRuns": false,
   "env": {
     "username": "bitnamiTest",

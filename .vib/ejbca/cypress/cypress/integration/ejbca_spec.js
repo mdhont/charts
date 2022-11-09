@@ -23,7 +23,7 @@ it('allows to enrol and verify certificate', () => {
           doc.addEventListener('click', () => {
             setTimeout(function () {
               doc.location.reload();
-            }, 10000);
+            }, 2000);
           });
 
           cy.contains('input', 'Enroll').click();
