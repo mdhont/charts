@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://localhost",
+  "trashAssetsBeforeRuns": false,
   "env": {
     "username": "bitnamiTest",
     "password": "ComplicatedPassword123!4",
