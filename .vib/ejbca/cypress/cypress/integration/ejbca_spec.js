@@ -2,6 +2,7 @@
 
 it('allows to enrol and verify certificate', () => {
   const certFile = `cypress/downloads/${Cypress.env('username')}.p12`;
+  var myTimeout;
   cy.task('fileExists', certFile).then((exists) => {
     // A user can only enrol once
     if (!exists) {
@@ -21,15 +22,22 @@ it('allows to enrol and verify certificate', () => {
         .document()
         .then(function (doc) {
           doc.addEventListener('click', () => {
-            setTimeout(function () {
+            myTimeout = setTimeout(function () {
+              cy.log('RELOADING')
               doc.location.reload();
-            }, 2000);
+            }, 5000);
           });
 
           cy.contains('input', 'Enroll').click();
+          cy.log('CLICKED')
         });
     }
+    cy.log('NO FILE')
     cy.readFile(certFile).should('exist');
+    cy.log('FILE FOUND')
+    clearTimeout(myTimeout);
+    cy.log('CLEARED TIMEOUT')
+
   });
 
   cy.visit('/ejbca/retrieve/list_certs.jsp');
@@ -37,4 +45,5 @@ it('allows to enrol and verify certificate', () => {
   cy.get('#ok').click();
   cy.contains('Check if certificate is revoked').click();
   cy.contains('has NOT been revoked');
+  cy.log('ENDING TEST')
 });

@@ -1,5 +1,6 @@
 {
-  "baseUrl": "http://34.74.67.149",
+  "baseUrl": "http://localhost",
+  "pageLoadTimeout": 100000,
   "env": {
     "username": "bitnamiTest",
     "password": "ComplicatedPassword123!4",
