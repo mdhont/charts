@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://34.75.235.104",
+  "baseUrl": "http://localhost",
   "pageLoadTimeout": 100000,
   "env": {
     "username": "bitnamiTest",
