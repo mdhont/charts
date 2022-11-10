@@ -15,7 +15,7 @@ $ helm install my-release bitnami/<chart>
 
 ![Installing a chart](demo.gif)
 
-### Vulnerabilities scanner
+## Vulnerabilities scanner
 
 Each Helm chart contains one or more containers. Those containers use images provided by Bitnami through its test & release pipeline and whose source code can be found at [bitnami/containers](https://github.com/bitnami/containers).
 
