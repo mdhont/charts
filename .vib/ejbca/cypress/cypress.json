@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost",
+  "baseUrl": "http://34.74.67.149",
   "env": {
     "username": "bitnamiTest",
     "password": "ComplicatedPassword123!4",
