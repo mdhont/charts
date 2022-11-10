@@ -23,13 +23,12 @@ it('allows to enrol and verify certificate', () => {
           doc.addEventListener('click', () => {
             setTimeout(function () {
               doc.location.reload();
-            }, 2000);
+            }, 5000);
           });
 
           cy.contains('input', 'Enroll').click();
         });
     }
-    cy.wait(5000);
   });
 
   cy.visit('/ejbca/retrieve/list_certs.jsp');
