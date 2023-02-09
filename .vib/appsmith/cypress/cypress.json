@@ -4,5 +4,7 @@
     "password": "bitnami!1234"
   },
   "baseUrl": "http://localhost",
-  "defaultCommandTimeout": 60000
+  "defaultCommandTimeout": 120000,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
 }
