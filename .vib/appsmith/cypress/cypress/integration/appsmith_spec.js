@@ -22,7 +22,7 @@ it('allows to create a new project', () => {
     cy.get('[class*="fork-button"]').click();
   })
   cy.contains('Marketing Portal');
-  cy.contains('Deploy').click();
+  cy.contains('Deploy').click({force: true});
   // This will open a new window, but we can use the following workaround to see the page
   cy.get('[class*="deploy-popup"]').click();
   cy.get('[class*="current-deployed"]').invoke('removeAttr', 'target').click()
