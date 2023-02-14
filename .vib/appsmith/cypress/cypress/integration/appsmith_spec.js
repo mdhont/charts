@@ -24,8 +24,8 @@ it('allows to create a new project', () => {
   cy.contains('Marketing Portal');
   cy.contains('Deploy').click({force: true});
   // This will open a new window, but we can use the following workaround to see the page
-  cy.get('[class*="deploy-popup"]').click();
-  cy.get('[class*="current-deployed"]').invoke('removeAttr', 'target').click()
+  cy.get('[class*="deploy-popup"]').click({force: true});
+  cy.get('[class*="current-deployed"]').invoke('removeAttr', 'target').click({force: true})
   // We check that the expected exist but also a button not present in the edition UI
   cy.contains('Marketing Portal');
   cy.contains('Edit App');
