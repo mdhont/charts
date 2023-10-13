@@ -322,7 +322,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `metrics.enabled`                                           | Start a side-car prometheus exporter                                                                                                      | `false`                   |
 | `metrics.image.registry`                                    | Exporter image registry                                                                                                                   | `docker.io`               |
 | `metrics.image.repository`                                  | Exporter image repository                                                                                                                 | `bitnami/mysqld-exporter` |
-| `metrics.image.tag`                                         | Exporter image tag (immutable tags are recommended)                                                                                       | `0.15.0-debian-11-r67`    |
+| `metrics.image.tag`                                         | Exporter image tag (immutable tags are recommended)                                                                                       | `0.15.0-debian-11-r69`    |
 | `metrics.image.digest`                                      | Exporter image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag                                  | `""`                      |
 | `metrics.image.pullPolicy`                                  | Exporter image pull policy                                                                                                                | `IfNotPresent`            |
 | `metrics.image.pullSecrets`                                 | Specify docker-registry secret names as an array                                                                                          | `[]`                      |
@@ -461,6 +461,10 @@ helm upgrade my-release oci://registry-1.docker.io/bitnamicharts/mariadb --set a
 ```
 
 | Note: you need to substitute the placeholder _[ROOT_PASSWORD]_ with the value obtained in the installation notes.
+
+### To 14.0.0
+
+This major release bumps the MariaDB version to 11.1. Follow the [upstream instructions](https://mariadb.com/kb/en/upgrading-between-minor-versions-on-linux/) for upgrading from MariaDB 11.0 to 11.1. No major issues are expected during the upgrade.
 
 ### To 13.0.0
 
