@@ -1,5 +1,5 @@
 # Copyright VMware, Inc.
-# SPDX-License-Identifier: APACHE-2.0
+## SPDX-License-Identifier: APACHE-2.0
 
 annotations:
   category: Infrastructure
@@ -43,4 +43,4 @@ maintainers:
 name: flux
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/flux
-version: 1.2.2
+version: 1.2.3
