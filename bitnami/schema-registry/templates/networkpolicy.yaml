@@ -7,7 +7,7 @@ SPDX-License-Identifier: APACHE-2.0
 kind: NetworkPolicy
 apiVersion: {{ include "common.capabilities.networkPolicy.apiVersion" . }}
 metadata:
-  name: {{ include "common.names.fullname" . }}
+  name: {{ template "common.names.fullname" . }}
   namespace: {{ include "common.names.namespace" . | quote }}
   labels: {{- include "common.labels.standard" ( dict "customLabels" .Values.commonLabels "context" $ ) | nindent 4 }}
   {{- if .Values.commonAnnotations }}
@@ -27,45 +27,36 @@ spec:
           protocol: UDP
         - port: 53
           protocol: TCP
-        {{- if .Values.rbac.create }}
-        # Allow access to kube-apiserver
-        {{- range $port := .Values.networkPolicy.kubeAPIServerPorts }}
-        - port: {{ $port }}
-        {{- end }}
-        {{- end }}
-    # Allow internal communications between nodes
+    # Allow outbound connections to other cluster pods
     - ports:
-        - port: {{ .Values.service.ports.epmd }}
-        - port: {{ .Values.service.ports.amqp }}
-        - port: {{ .Values.service.ports.amqpTls }}
-        - port: {{ .Values.service.ports.dist }}
-        - port: {{ .Values.service.ports.manager }}
+        - port: 8081 # TODO: Change to containerPorts.http when the container has support for it
       to:
         - podSelector:
             matchLabels: {{- include "common.labels.matchLabels" ( dict "customLabels" .Values.commonLabels "context" $ ) | nindent 14 }}
+    # Allow outbound connections to Kafka
+    - ports:
+        - port: {{ include "schema-registry.kafka.port" . }}
+      {{- if .Values.kafka.enabled }}
+      to: 
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: kafka
+              app.kubernetes.io/instance: {{ .Release.Name }}
+      {{- end }}
     {{- if .Values.networkPolicy.extraEgress }}
-    {{- include "common.tplvalues.render" ( dict "value" .Values.rts.networkPolicy.extraEgress "context" $ ) | nindent 4 }}
+    {{- include "common.tplvalues.render" ( dict "value" .Values.networkPolicy.extraEgress "context" $ ) | nindent 4 }}
     {{- end }}
   ingress:
-    # Allow inbound connections to RabbitMQ
     - ports:
-        - port: {{ .Values.containerPorts.epmd }}
-        - port: {{ .Values.containerPorts.amqp }}
-        - port: {{ .Values.containerPorts.amqpTls }}
-        - port: {{ .Values.containerPorts.dist }}
-        - port: {{ .Values.containerPorts.manager }}
-        {{- if .Values.metrics.enabled }}
-        - port: {{ .Values.containerPorts.metrics }}
-        {{- end }}
+        - port: 8081 # TODO: Change to containerPorts.http when the container has support for it
+        - port: {{ .Values.service.ports.http }}
       {{- if not .Values.networkPolicy.allowExternal }}
       from:
         - podSelector:
             matchLabels: {{- include "common.labels.matchLabels" ( dict "customLabels" .Values.commonLabels "context" $ ) | nindent 14 }}
         - podSelector:
             matchLabels:
-              {{ include "common.names.fullname" . }}-client: "true"
-        - podSelector:
-            matchLabels: {{- include "common.labels.matchLabels" ( dict "customLabels" $podLabels "context" $ ) | nindent 14 }}
+              {{ template "common.names.fullname" . }}-client: "true"
         {{- if .Values.networkPolicy.ingressNSMatchLabels }}
         - namespaceSelector:
             matchLabels:
