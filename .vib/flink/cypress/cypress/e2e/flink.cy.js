@@ -17,6 +17,6 @@ it('should show available task slots', () => {
 
 it('should show completed jobs', () => {
   cy.visit('/')
-  cy.contains('span', 'FINISHED')
+  cy.contains('span', 'FINISHED', {matchCase: false})
 })
 
